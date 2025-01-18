@@ -1,0 +1,114 @@
+---
+import SiteTitle from './ui/SiteTitle.astro';
+---
+
+<header class="main-header">
+    <a href="/" class="main-header__brand">
+      <img 
+        class="main-header__logo" 
+        src="/alexlou/images/alexlou-logo1.png" 
+        alt="Alexlou - Agence créative de communication et d'illustration" 
+      />
+    </a>
+
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="/" class="main-nav__link">A propos</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="/about" class="main-nav__link">Communication</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="/services" class="main-nav__link">Illustration</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="/contact" class="main-nav__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a href="mailto:hello@alexlou.com" class="button button--primary">écrivez-moi</a>
+</header>
+
+<div class="hero">
+  <img 
+    class="hero__logo" 
+    src="/alexlou/images/alexlou-logo2.png" 
+    alt="Agence créative de communication et d'illustration" 
+  />
+  <SiteTitle class="hero__title">
+    <strong class="hero__title-emphasis">Agence créative </strong> 
+    communication et illustration
+  </SiteTitle>
+</div>
+
+<style>
+  /* Main Header */
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md) 0;
+  }
+
+  .main-header__logo {
+    height: 5rem;
+  }
+
+  /* Main Navigation */
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-nav__list {
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav__link {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .main-nav__link:hover {
+    color: var(--color-primary-200);
+  }
+
+  /* Button Component */
+  .button {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .button--primary {
+    background-color: var(--color-primary-200);
+    color: white;
+    font-style: italic;
+  }
+
+  .button:hover {
+    opacity: 0.9;
+  }
+
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--spacing-lg);
+  }
+
+  .hero__logo {
+    max-height: 30rem;
+  }
+
+  .hero__title-emphasis {
+    display: block;
+  }
+</style>
+

@@ -5,18 +5,106 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Alexlou | Agence créative de communication et d'illustration</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<style is:global>
+	:root {
+
+	--color-primary-50: #fff;        
+    --color-primary-100: #e4e8ff;  
+    --color-primary-200: #6b94ff;        
+	--color-primary-300: #0d2e6a;   
+
+
+	--spacing-xs: 0.25rem;
+	--spacing-sm: 0.5rem;
+	--spacing-md: 1rem;
+	--spacing-lg: 2rem;
+	--spacing-xl: 4rem;
+
+	--font-size-base: 1.8rem;
+	--font-size-lg: 2.4rem;
+	--font-size-xl: 3.2rem;
+
+	--container-width: 90%;
+	--container-max-width: 75rem;
 	}
+	@font-face {
+		font-family: 'PlayfairDisplay';
+		src: url('/alexlou/fonts/PlayfairDisplay.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	
+	@font-face {
+		font-family: 'PlayfairDisplay';
+		src: url('/alexlou/fonts/PlayfairDisplay-Italic.woff2') format('woff2');
+		font-weight: normal;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	h1, h2, h3, h4, h5, h6, p, span, a, li, blockquote, label, input, textarea {
+		color: var(--color-primary-300);
+		font-size: 1.8rem;
+	}
+  
+	
+	html{
+		font-size: 14px;
+	}
+	
+	@media (min-width: 40em) {
+		:root {
+			--container-width: 85%;
+		}
+		html {
+			font-size: 15px;
+		}
+	}
+	
+	/* Tablets/small laptops (768px and up) */
+	@media (min-width: 48em) {
+		html {
+			font-size: 16px;
+		}
+	}
+
+	/* Desktop (1024px and up) */
+	@media (min-width: 64em) {
+		:root {
+			--container-width: 80%;
+		}
+		html {
+			font-size: 16px;
+		}
+	}
+
+	a{
+		text-decoration: none;
+	}
+	ul, ol{
+		list-style: none;
+	}
+	button{
+		border: none;
+		background: none;
+	}
+	
+	* {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	}
+	body {
+	  font-family: 'PlayfairDisplay', serif;
+	}
+
+
 </style>

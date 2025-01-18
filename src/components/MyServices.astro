@@ -1,0 +1,98 @@
+---
+import SectionTitle from './ui/SectionTitle.astro';
+import Container from '../layouts/Container.astro';
+---
+
+<Container>
+	<section class="my-services">
+		<div class="my-services__title">
+			<SectionTitle>Mes prestations</SectionTitle>
+		</div>
+		<ol class="my-services__list">
+			<li class="my-services__item">
+				<div >
+					<img src="/alexlou/images/social-media.png" alt="" class="my-services__item-image">
+					<h3 class="my-services__item-title">Communication</h3>
+					<p class="my-services__item-description">
+						Je vous propose un accompagnement personnalisé, riche de plus de 10 années de formation et d'expérience dans le domaine.
+					</p>
+				</div>
+				<a href="/services" class="my-services__item-link">
+					<img src="/alexlou/images/star.png" alt="En savoir plus" class="my-services__item-link-icon">
+				</a>
+			</li>
+			<li class="my-services__item">
+				<div >
+					<img src="/alexlou/images/graphisme.png" alt="" class="my-services__item-image">
+					<h3 class="my-services__item-title">Création graphique</h3>
+					<p class="my-services__item-description">
+						Supports de communication visuelle
+						Identité visuelle
+						Logos
+					</p>
+					
+				</div>
+				<a href="/services" class="my-services__item-link">
+					<img src="/alexlou/images/star.png" alt="En savoir plus" class="my-services__item-link-icon">
+				</a>
+			</li>
+			<li class="my-services__item">
+				<div >
+					<img src="/alexlou/images/illustration.png" alt="" class="my-services__item-image">
+					<h3 class="my-services__item-title">Illustration</h3>
+					<p class="my-services__item-description">
+						Portraits personnalisés
+						Projets sur demande				
+					</p>
+				</div>
+				<a href="/services" class="my-services__item-link">
+					<img src="/alexlou/images/star.png" alt="En savoir plus" class="my-services__item-link-icon">
+				</a>
+			</li>
+		</ol>
+	</section>
+</Container>
+
+<style>
+	.my-services__title {
+		margin-top: 8rem;
+		text-align: center;
+	}
+	.my-services__item{
+		display: flex;
+		text-align: center;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 100%;
+	}
+	
+	.my-services__list{
+		margin-top: var(--spacing-lg);
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--spacing-lg);
+	}
+	.my-services__item-image{
+		height: 10rem;
+	}
+	.my-services__item-title{
+		font-size: var(--font-size-md);
+	}
+	.my-services__item-link{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		text-align: center;
+		vertical-align: middle;
+		border: 2px solid var(--color-primary-200);
+		max-width: 12rem;
+		padding: var(--spacing-sm);
+		aspect-ratio: 1 / 1;
+		margin-top: var(--spacing-md);
+	}
+	.my-services__item-link-icon{
+		width: 1.5rem;
+	}
+</style>

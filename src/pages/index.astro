@@ -1,11 +1,126 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Container from '../layouts/Container.astro';
+import SectionTitle from '../components/ui/SectionTitle.astro';
+import SiteTitle from '../components/ui/SiteTitle.astro';
+import MyServices from '../components/MyServices.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<Container>
+		<Header />
+	</Container>
+	<section class="intro">
+		<Container>
+			<div class="intro__content">
+				<div class="intro__header">
+					<SectionTitle>Mon objectif ? <span class="intro__highlight">Vous faire briller ! <img class="intro__icon" src="/alexlou/images/star.png" alt="" aria-hidden="true" /></span></SectionTitle>
+					<p class="intro__tagline">
+						Faire rayonner vos projets
+						en mêlant <strong class="intro__tagline-highlight">créativité, expertise
+							et passion</strong>.
+					</p>
+				</div>
+				<img class="intro__image" src="/alexlou/images/alexlou-3.webp" alt="" />
+			</div>
+			
+			<div class="about-teaser">
+				<a class="about-teaser__button" href="/about">
+					Pour mieux me connaître
+				</a>
+				<p class="about-teaser__description">
+					Je vous propose un accompagnement personnalisé, riche de plus de 10 années de formation et d'expérience dans le domaine.
+				</p>
+			</div>
+		</Container>
+	</section>
+	<MyServices />
 </Layout>
+
+<style>
+
+	.intro {
+		background-color: var(--color-primary-100);
+		margin-top: 30rem;
+		padding: var(--spacing-lg) 0;
+	}
+
+	.intro__content {
+		display: flex;
+		justify-content: space-between;
+		gap: 10rem;
+	}
+
+	.intro__image {
+		width: 60%;
+		max-width: 50rem;
+		height: auto;
+		object-fit: contain;
+
+		margin-top: -30rem;
+	}
+
+	.intro__highlight {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-sm);
+	}
+
+	.intro__tagline {
+		margin-top: var(--spacing-lg);
+		font-size: var(--font-size-lg);
+	}
+	.intro__followup {
+		font-size: var(--font-size-lg);
+	}
+
+	.intro__tagline-highlight {
+		font-style: italic;
+		display: inline;
+		font-weight: normal;
+	}
+
+	.intro__icon {
+		height: 2rem;
+	}
+	
+	.intro__followup{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20rem;
+	}
+
+	.intro__followup-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		text-align: center;
+		vertical-align: middle;
+		border:2px solid var(--color-primary-200);
+		max-width: 12rem;
+		aspect-ratio: 1 / 1;
+	}
+
+	.about-teaser {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20rem;
+		font-size: var(--font-size-lg);
+	}
+
+	.about-teaser__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		text-align: center;
+		vertical-align: middle;
+		border: 2px solid var(--color-primary-200);
+		max-width: 12rem;
+		aspect-ratio: 1 / 1;
+	}
+</style>
